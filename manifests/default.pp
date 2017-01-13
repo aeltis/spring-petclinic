@@ -48,5 +48,3 @@ node default {
       File["/usr/bin/java"]
     ]     
   }
-
-:
