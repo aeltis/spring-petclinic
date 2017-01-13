@@ -30,14 +30,14 @@ node default {
     require      => Archive["/tmp/jdk-8u111-linux-x64.tar.gz"]
   }
 
-  file { "/vagrant/petclinic/spring-petclinic-1.4.2.jar":
+  file { "/tmp/spring-petclinic-1.4.2.jar":
     ensure       => file,
     mode         => '0755'
   }
 
   file { "/etc/init.d/petclinic":
     ensure       => link,
-    target       => '/vagrant/petclinic/spring-petclinic-1.4.2.jar'
+    target       => '/tmp/spring-petclinic-1.4.2.jar'
   }
  
   service { "petclinic":
